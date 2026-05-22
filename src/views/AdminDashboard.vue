@@ -111,6 +111,7 @@
               <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 text-xs font-bold uppercase tracking-wider">
                 <th class="py-5 px-6">접수 일시</th>
                 <th class="py-5 px-6">신청교사 / 학교명</th>
+                <th class="py-5 px-6">연락처 및 이메일</th>
                 <th class="py-5 px-6">관심 프로그램</th>
                 <th class="py-5 px-6">문의 사항 상세</th>
                 <th class="py-5 px-6">처리 상태</th>
@@ -131,6 +132,11 @@
                 <td class="py-5 px-6 whitespace-nowrap">
                   <div class="font-bold text-slate-900 text-sm">{{ item.name }}</div>
                   <div class="text-xs text-slate-500 mt-0.5">{{ item.school_name }}</div>
+                </td>
+                <!-- 연락처 및 이메일 -->
+                <td class="py-5 px-6 whitespace-nowrap">
+                  <div class="font-bold text-slate-800 text-xs flex items-center gap-1">📞 {{ item.phone }}</div>
+                  <div class="text-xs text-slate-500 mt-1 flex items-center gap-1 text-[11px]">✉️ {{ item.email }}</div>
                 </td>
                 <!-- 관심 프로그램 -->
                 <td class="py-5 px-6 whitespace-nowrap">

@@ -668,7 +668,7 @@
               </div>
               <div class="text-left">
                 <p class="text-[10px] font-bold text-slate-400 uppercase">공식 교육 제안 이메일</p>
-                <p class="text-sm font-extrabold text-slate-800 mt-0.5">official@hanpage.net</p>
+                <p class="text-sm font-extrabold text-slate-800 mt-0.5">hanpage1@naver.com</p>
               </div>
             </div>
           </div>
