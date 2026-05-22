@@ -54,6 +54,14 @@
           >
             교육 문의
           </a>
+          <a 
+            href="https://blog.naver.com/prologue/PrologueList.naver?blogId=hanpage1&skinType=&skinId=&from=menu&userSelectMenu=true" 
+            target="_blank"
+            class="text-slate-600 hover:text-brand-blue border-b-2 border-transparent pb-1 transition-smooth flex items-center gap-1 font-bold"
+          >
+            한페이지 블로그
+            <ExternalLink class="w-3.5 h-3.5" />
+          </a>
         </nav>
 
         <!-- 데스크톱 관리자 버튼 -->
@@ -82,6 +90,10 @@
           <a href="#programs" @click="isMobileMenuOpen = false" :class="activeSection === 'programs' ? 'text-brand-blue font-bold' : 'text-slate-600'" class="text-lg font-medium hover:text-brand-blue transition-smooth">교육 프로그램</a>
           <a href="#gallery" @click="isMobileMenuOpen = false" :class="activeSection === 'gallery' ? 'text-brand-blue font-bold' : 'text-slate-600'" class="text-lg font-medium hover:text-brand-blue transition-smooth">활동 갤러리</a>
           <a href="#contact" @click="isMobileMenuOpen = false" :class="activeSection === 'contact' ? 'text-brand-blue font-bold' : 'text-slate-600'" class="text-lg font-medium hover:text-brand-blue transition-smooth">교육 문의</a>
+          <a href="https://blog.naver.com/prologue/PrologueList.naver?blogId=hanpage1&skinType=&skinId=&from=menu&userSelectMenu=true" target="_blank" @click="isMobileMenuOpen = false" class="text-lg font-bold text-slate-600 hover:text-brand-blue transition-smooth flex items-center gap-1.5">
+            한페이지 블로그
+            <ExternalLink class="w-4 h-4" />
+          </a>
           <hr class="border-slate-200/60" />
           <div class="flex flex-col gap-3">
             <router-link to="/admin" @click="isMobileMenuOpen = false" class="py-3 text-center rounded-xl bg-white border border-slate-200 text-slate-700 font-bold hover:bg-slate-50 transition-smooth">
@@ -814,6 +826,8 @@
         <div class="flex items-center gap-4 text-slate-500">
           <router-link to="/admin" class="hover:text-brand-blue transition-smooth">관리자 관리 포털</router-link>
           <span>|</span>
+          <a href="https://blog.naver.com/prologue/PrologueList.naver?blogId=hanpage1&skinType=&skinId=&from=menu&userSelectMenu=true" target="_blank" class="hover:text-brand-blue transition-smooth">한페이지 블로그</a>
+          <span>|</span>
           <span>대표 강사 서윤호</span>
           <span>|</span>
           <span>연락처 010-8503-2130</span>
@@ -1036,7 +1050,7 @@ import { supabase } from '../utils/supabase'
 import Swal from 'sweetalert2'
 import { 
   Menu, X, Sparkles, Download, ArrowRight, Compass, Award, 
-  ChevronRight, Play, CheckCircle, Phone, Mail, Clock, PiggyBank, Target, Hash
+  ChevronRight, Play, CheckCircle, Phone, Mail, Clock, PiggyBank, Target, Hash, ExternalLink
 } from 'lucide-vue-next'
 
 // --- 🧭 모바일 상태 제어 ---
