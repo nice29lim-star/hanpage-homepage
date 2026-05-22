@@ -145,38 +145,30 @@
             
             <div class="absolute top-4 right-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Live Status</div>
             
-            <!-- 다이나믹 통계 카드 리스트 -->
-            <div class="flex flex-col gap-5 w-full mt-4">
-              <!-- 만족도 카드 -->
-              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-blue/30 hover:bg-slate-100/60 transition-smooth shadow-sm">
-                <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-xl shadow-sm">💡</div>
+            <!-- 다이나믹 통계 카드 리스트 (3D 프리미엄 입체 디자인 및 볼륨 스케일업) -->
+            <div class="flex flex-col gap-6 w-full mt-6 perspective-[1200px]">
+              <!-- 만족도 카드 (3D 입체 프레임) -->
+              <div class="flex items-center gap-5 p-6 rounded-[24px] bg-white border border-slate-100 hover:border-brand-blue/30 transition-all duration-500 shadow-[0_10px_30px_rgba(37,99,235,0.06)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.14)] hover:-translate-y-2.5 hover:rotate-[-0.5deg] hover:scale-[1.03] group/card">
+                <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-3xl shadow-md group-hover/card:scale-110 transition-smooth duration-550 shrink-0">💡</div>
                 <div class="flex-grow">
-                  <h4 class="text-xs font-bold text-slate-500">체험 만족도 평균</h4>
-                  <div class="flex items-baseline gap-2 mt-1">
-                    <p class="text-2xl font-black text-brand-blue">98.7%</p>
-                    <span class="text-[10px] text-emerald-600 font-bold flex items-center">▲ 1.2% (전년비)</span>
+                  <h4 class="text-xs md:text-sm font-extrabold text-slate-500 tracking-wider">체험 만족도 평균</h4>
+                  <div class="flex items-baseline gap-2.5 mt-1.5">
+                    <p class="text-3xl md:text-4xl font-black text-brand-blue tracking-tight">98.7%</p>
+                    <span class="text-xs text-emerald-600 font-extrabold flex items-center bg-emerald-500/8 px-2 py-0.5 rounded-full border border-emerald-500/10">
+                      ▲ 1.2% (전년비)
+                    </span>
                   </div>
                 </div>
               </div>
               
-              <!-- 참여 학교 수 카드 -->
-              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-blue/30 hover:bg-slate-100/60 transition-smooth shadow-sm">
-                <div class="w-12 h-12 rounded-xl bg-brand-indigo/10 flex items-center justify-center text-xl shadow-sm">🏫</div>
+              <!-- 레크리에이션 카드 (3D 입체 프레임) -->
+              <div class="flex items-center gap-5 p-6 rounded-[24px] bg-white border border-slate-100 hover:border-emerald-500/30 transition-all duration-500 shadow-[0_10px_30px_rgba(16,185,129,0.06)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.14)] hover:-translate-y-2.5 hover:rotate-[0.5deg] hover:scale-[1.03] group/card">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-3xl shadow-md group-hover/card:scale-110 transition-smooth duration-550 shrink-0">🔥</div>
                 <div class="flex-grow">
-                  <h4 class="text-xs font-bold text-slate-500">누적 참여 학교 수</h4>
-                  <div class="flex items-baseline gap-2 mt-1">
-                    <p class="text-2xl font-black text-slate-800">320개교 돌파</p>
-                    <span class="text-[10px] text-brand-indigo font-bold">전국 초·중·고 학사 연동</span>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 레크리에이션 카드 -->
-              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-blue/30 hover:bg-slate-100/60 transition-smooth shadow-sm">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-xl shadow-sm">🔥</div>
-                <div class="flex-grow">
-                  <h4 class="text-xs font-bold text-slate-500">현장형 레크리에이션 구성</h4>
-                  <p class="text-xs font-bold text-slate-600 mt-1">웃음과 소통 중심 몰입도 100% 보장</p>
+                  <h4 class="text-xs md:text-sm font-extrabold text-slate-500 tracking-wider">현장형 레크리에이션 구성</h4>
+                  <p class="text-sm md:text-base font-extrabold text-slate-700 tracking-tight mt-1.5">
+                    웃음과 소통 중심 <span class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">몰입도 100% 보장</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -257,13 +249,13 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               
-              <!-- 왼쪽: 대표 이미지 (둥근 사각형 + p-2 + object-contain을 통한 잘림 해결!) -->
+              <!-- 왼쪽: 대표 이미지 (3D 프리미엄 입체 스케일업 프레임) -->
               <div class="lg:col-span-5 flex flex-col items-center text-center gap-6">
-                <div class="relative">
-                  <div class="absolute inset-0 bg-brand-blue rounded-3xl blur-md opacity-10 group-hover:opacity-20 transition-smooth pointer-events-none"></div>
-                  <!-- rounded-full에서 rounded-3xl로 전격 변경하여 캐릭터 잘림을 근본 방지합니다. -->
-                  <div class="w-52 h-52 md:w-60 md:h-60 rounded-3xl border-4 border-slate-100 bg-white shadow-xl overflow-hidden flex items-center justify-center p-2.5 relative z-10 transition-smooth group-hover:border-brand-blue/40">
-                    <img src="/assets/images/characters/ceo.png" alt="서윤호 대표" class="w-full h-full object-contain transform hover:scale-105 transition-smooth" />
+                <div class="relative group/avatar cursor-pointer">
+                  <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-blue to-brand-indigo rounded-[36px] blur-md opacity-20 group-hover/avatar:opacity-40 transition-all duration-500 pointer-events-none"></div>
+                  <!-- w-52 h-52 md:w-60 md:h-60 에서 w-64 h-64 md:w-80 md:h-80 로 대폭 스케일업 -->
+                  <div class="w-64 h-64 md:w-80 md:h-80 rounded-[32px] border-4 border-slate-100 bg-white shadow-[0_15px_40px_rgba(37,99,235,0.08)] hover:shadow-[0_25px_55px_rgba(37,99,235,0.18)] overflow-hidden flex items-center justify-center p-3.5 relative z-10 transition-all duration-500 transform hover:scale-[1.04] hover:-translate-y-2 hover:rotate-[0.5deg] group-hover/avatar:border-brand-blue/50">
+                    <img src="/assets/images/characters/ceo.png" alt="서윤호 대표" class="w-full h-full object-contain transition-smooth duration-500" />
                   </div>
                 </div>
                 
@@ -383,11 +375,12 @@
               <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-blue/5 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-blue/10 transition-smooth"></div>
               
               <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <!-- 캐릭터 이미지 잘림 방지 (rounded-3xl + object-contain) -->
-                <div class="relative shrink-0">
-                  <div class="absolute inset-0 bg-brand-blue rounded-3xl blur-md opacity-10 group-hover:opacity-20 transition-smooth pointer-events-none"></div>
-                  <div class="w-32 h-32 rounded-3xl border-4 border-slate-100 bg-slate-50 shadow-md overflow-hidden flex items-center justify-center p-2 relative z-10 transition-smooth group-hover:border-brand-blue/40">
-                    <img src="/assets/images/characters/manager1.png" alt="박주연 매니저" class="w-full h-full object-contain transform hover:scale-105 transition-smooth" />
+                <!-- 캐릭터 이미지 잘림 방지 (3D 프리미엄 입체 스케일업 프레임) -->
+                <div class="relative shrink-0 group/manager-avatar cursor-pointer">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-sky rounded-[24px] blur-md opacity-15 group-hover/manager-avatar:opacity-35 transition-all duration-500 pointer-events-none"></div>
+                  <!-- w-32 h-32 에서 w-40 h-40 md:w-48 md:h-48 로 대폭 스케일업 -->
+                  <div class="w-40 h-40 md:w-48 md:h-48 rounded-[22px] border-4 border-slate-100 bg-white shadow-[0_12px_30px_rgba(37,99,235,0.06)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.15)] overflow-hidden flex items-center justify-center p-3 relative z-10 transition-all duration-500 transform hover:scale-[1.04] hover:-translate-y-1.5 hover:rotate-[-0.5deg] group-hover/manager-avatar:border-brand-blue/50">
+                    <img src="/assets/images/characters/manager1.png" alt="박주연 매니저" class="w-full h-full object-contain transition-smooth duration-500" />
                   </div>
                 </div>
                 
@@ -415,11 +408,12 @@
               <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-indigo/5 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-indigo/10 transition-smooth"></div>
               
               <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <!-- 캐릭터 이미지 잘림 방지 (rounded-3xl + object-contain) -->
-                <div class="relative shrink-0">
-                  <div class="absolute inset-0 bg-brand-indigo rounded-3xl blur-md opacity-10 group-hover:opacity-20 transition-smooth pointer-events-none"></div>
-                  <div class="w-32 h-32 rounded-3xl border-4 border-slate-100 bg-slate-50 shadow-md overflow-hidden flex items-center justify-center p-2 relative z-10 transition-smooth group-hover:border-brand-indigo/40">
-                    <img src="/assets/images/characters/manager2.png" alt="이승규 매니저" class="w-full h-full object-contain transform hover:scale-105 transition-smooth" />
+                <!-- 캐릭터 이미지 잘림 방지 (3D 프리미엄 입체 스케일업 프레임) -->
+                <div class="relative shrink-0 group/manager-avatar cursor-pointer">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-brand-indigo to-brand-purple rounded-[24px] blur-md opacity-15 group-hover/manager-avatar:opacity-35 transition-all duration-500 pointer-events-none"></div>
+                  <!-- w-32 h-32 에서 w-40 h-40 md:w-48 md:h-48 로 대폭 스케일업 -->
+                  <div class="w-40 h-40 md:w-48 md:h-48 rounded-[22px] border-4 border-slate-100 bg-white shadow-[0_12px_30px_rgba(79,70,229,0.06)] hover:shadow-[0_20px_45px_rgba(79,70,229,0.15)] overflow-hidden flex items-center justify-center p-3 relative z-10 transition-all duration-500 transform hover:scale-[1.04] hover:-translate-y-1.5 hover:rotate-[0.5deg] group-hover/manager-avatar:border-brand-indigo/50">
+                    <img src="/assets/images/characters/manager2.png" alt="이승규 매니저" class="w-full h-full object-contain transition-smooth duration-500" />
                   </div>
                 </div>
                 
@@ -480,104 +474,80 @@
           </div>
         </div>
 
-        <!-- 탭 콘텐츠 카드 렌더링 -->
+        <!-- 탭 콘텐츠 카드 렌더링 (3D 프리미엄 입체 디자인 및 동적 모달 연동) -->
         <transition name="fade" mode="out-in">
           
           <!-- 진로 콘텐츠 3종 -->
-          <div v-if="activeTab === 'career'" key="career" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-            
-            <!-- 강점 발굴단 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-blue shadow-md">
+          <div v-if="activeTab === 'career'" key="career" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 perspective-[1000px]">
+            <div 
+              v-for="(prog, idx) in programsData.career" 
+              :key="prog.id"
+              @click="openProgramModal(prog)"
+              :class="[
+                idx === 0 ? 'border-t-brand-blue' : idx === 1 ? 'border-t-brand-indigo' : 'border-t-brand-sky'
+              ]"
+              class="bg-white p-8 rounded-[28px] border border-slate-100 border-t-4 shadow-[0_12px_35px_rgba(37,99,235,0.05)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.16)] hover:-translate-y-3 hover:rotate-[0.5deg] hover:scale-[1.02] cursor-pointer transition-all duration-500 flex flex-col justify-between gap-8 h-full group"
+            >
               <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-blue/8 text-brand-blue w-max uppercase">추천: 신입생, 자유학기제</span>
-                <div class="text-4xl font-black text-brand-blue/30">01</div>
-                <h3 class="text-xl font-bold text-slate-800">강점 발굴단</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  모두가 참여하여 웃고 소통하며 어색함을 말끔히 깨부수고, 다채로운 참여 게임 속에서 각자의 고유한 강점과 팀워크를 자연스럽게 발견하는 협력 중심 팀빌딩 프로그램입니다.
+                <span 
+                  :class="[
+                    idx === 0 ? 'bg-brand-blue/8 text-brand-blue' : idx === 1 ? 'bg-brand-indigo/8 text-brand-indigo' : 'bg-brand-sky/8 text-brand-sky'
+                  ]"
+                  class="text-[10px] font-extrabold px-3 py-1.5 rounded-full w-max uppercase tracking-wider"
+                >
+                  {{ prog.badge }}
+                </span>
+                <div class="text-4xl font-black opacity-20 group-hover:opacity-40 transition-smooth duration-500"
+                     :class="[
+                       idx === 0 ? 'text-brand-blue' : idx === 1 ? 'text-brand-indigo' : 'text-brand-sky'
+                     ]">
+                  {{ prog.num }}
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 group-hover:text-brand-blue transition-smooth">{{ prog.title }}</h3>
+                <p class="text-slate-500 font-medium text-sm leading-relaxed">
+                  {{ prog.shortIntro }}
                 </p>
               </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-blue hover:text-brand-indigo transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
-            </div>
-
-            <!-- 마인드 부스터 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-indigo shadow-md">
-              <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-indigo/8 text-brand-indigo w-max uppercase">추천: 학년 행사, 힐링 토크</span>
-                <div class="text-4xl font-black text-brand-indigo/30">02</div>
-                <h3 class="text-xl font-bold text-slate-800">마인드 부스터</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  마이크와 스토리텔링, 그리고 몰입형 레크리에이션이 긴밀하게 결합되어 학생들의 닫힌 내면과 걱정거리가 스르르 풀리는 고품격 양방향 토크 강연 콘서트 교육입니다.
-                </p>
+              <div class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-blue group-hover:text-brand-indigo transition-smooth">
+                세부 내용 보기 <ChevronRight class="w-4 h-4 transform group-hover:translate-x-1 transition-smooth" />
               </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-indigo hover:text-brand-blue transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
-            </div>
-
-            <!-- 우리의 캔버스 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-sky shadow-md">
-              <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-sky/8 text-brand-sky w-max uppercase">추천: 학교 축제, 전일제</span>
-                <div class="text-4xl font-black text-brand-sky/30">03</div>
-                <h3 class="text-xl font-bold text-slate-800">우리의 캔버스</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  기획부터 현장 무대 운영, 그리고 체험부스 조성까지 3단계 프로세스를 따라, 아이들 스스로가 주축이 되어 생생하게 이끌어 나가는 대규모 청소년 진로 축제 솔루션입니다.
-                </p>
-              </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-sky hover:text-brand-blue transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
             </div>
           </div>
-
+ 
           <!-- 디지털 콘텐츠 3종 -->
-          <div v-else key="digital" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-            
-            <!-- 나의 강점 스캐너 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-blue shadow-md">
+          <div v-else key="digital" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 perspective-[1000px]">
+            <div 
+              v-for="(prog, idx) in programsData.digital" 
+              :key="prog.id"
+              @click="openProgramModal(prog)"
+              :class="[
+                idx === 0 ? 'border-t-brand-blue' : idx === 1 ? 'border-t-brand-indigo' : 'border-t-brand-sky'
+              ]"
+              class="bg-white p-8 rounded-[28px] border border-slate-100 border-t-4 shadow-[0_12px_35px_rgba(37,99,235,0.05)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.16)] hover:-translate-y-3 hover:rotate-[-0.5deg] hover:scale-[1.02] cursor-pointer transition-all duration-500 flex flex-col justify-between gap-8 h-full group"
+            >
               <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-blue/8 text-brand-blue w-max uppercase">데이터 진단 / 학급 보고서</span>
-                <div class="text-4xl font-black text-brand-blue/30">01</div>
-                <h3 class="text-xl font-bold text-slate-800">나의 강점 스캐너</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  체계적인 데이터 진단 설문으로 각자의 재능 분포를 분석하며, 담당 교사에게는 학급 성향 및 강점 트렌드를 지표로 명료하게 제공하는 인공지능 분석 진단 솔루션입니다.
+                <span 
+                  :class="[
+                    idx === 0 ? 'bg-brand-blue/8 text-brand-blue' : idx === 1 ? 'bg-brand-indigo/8 text-brand-indigo' : 'bg-brand-sky/8 text-brand-sky'
+                  ]"
+                  class="text-[10px] font-extrabold px-3 py-1.5 rounded-full w-max uppercase tracking-wider"
+                >
+                  {{ prog.badge }}
+                </span>
+                <div class="text-4xl font-black opacity-20 group-hover:opacity-40 transition-smooth duration-500"
+                     :class="[
+                       idx === 0 ? 'text-brand-blue' : idx === 1 ? 'text-brand-indigo' : 'text-brand-sky'
+                     ]">
+                  {{ prog.num }}
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 group-hover:text-brand-blue transition-smooth">{{ prog.title }}</h3>
+                <p class="text-slate-500 font-medium text-sm leading-relaxed">
+                  {{ prog.shortIntro }}
                 </p>
               </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-blue hover:text-brand-indigo transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
-            </div>
-
-            <!-- 나 사용 설명서 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-indigo shadow-md">
-              <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-indigo/8 text-brand-indigo w-max uppercase">AI 활용 / 포트폴리오</span>
-                <div class="text-4xl font-black text-brand-indigo/30">02</div>
-                <h3 class="text-xl font-bold text-slate-800">나 사용 설명서</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  필터 없는 AI 의존의 부작용을 고찰하고, 자체 개발 워크시트로 진정성 있는 자기성찰을 거친 뒤, 생성형 AI 아트 기술을 활용해 세상에 하나뿐인 나만의 포트폴리오 북을 제작합니다.
-                </p>
+              <div class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-blue group-hover:text-brand-indigo transition-smooth">
+                세부 내용 보기 <ChevronRight class="w-4 h-4 transform group-hover:translate-x-1 transition-smooth" />
               </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-indigo hover:text-brand-blue transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
-            </div>
-
-            <!-- 일상의 발명가 -->
-            <div class="bg-white p-8 rounded-3xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-8 h-full border-t-4 border-t-brand-sky shadow-md">
-              <div class="flex flex-col gap-5">
-                <span class="text-[10px] font-extrabold px-3 py-1.5 rounded-full bg-brand-sky/8 text-brand-sky w-max uppercase">노코딩 AI 코딩 / 실생활 해결</span>
-                <div class="text-4xl font-black text-brand-sky/30">03</div>
-                <h3 class="text-xl font-bold text-slate-800">일상의 발명가</h3>
-                <p class="text-slate-600 font-medium text-sm leading-relaxed">
-                  어려운 프로그래밍 전공지식 없이 오직 대화형 AI 프롬프트를 조율하여, 나만의 창의 앱 프로토타입을 손수 빌드해 보는 실생활 밀착형 노코딩 테크 교육입니다.
-                </p>
-              </div>
-              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-brand-sky hover:text-brand-blue transition-smooth">
-                상세 문의하기 <ChevronRight class="w-4 h-4" />
-              </a>
             </div>
           </div>
         </transition>
@@ -897,6 +867,166 @@
         </div>
       </div>
     </transition>
+
+    <!-- 🔍 10. 교육 프로그램 세부 정보 3D 팝업 모달 -->
+    <transition name="fade">
+      <div 
+        v-if="selectedProgram" 
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
+        @click.self="closeProgramModal"
+      >
+        <div class="bg-white border border-slate-100 rounded-[32px] overflow-hidden max-w-2xl w-full shadow-[0_30px_70px_rgba(37,99,235,0.22)] relative max-h-[85vh] flex flex-col transform transition-all duration-500 scale-100">
+          
+          <!-- 상단 닫기 버튼 -->
+          <button 
+            @click="closeProgramModal"
+            class="absolute top-5 right-5 p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-smooth focus:outline-none z-20 shadow-sm"
+          >
+            <X class="w-5 h-5" />
+          </button>
+
+          <!-- 모달 내용 영역 (스크롤 가능) -->
+          <div class="overflow-y-auto p-6 md:p-10 flex flex-col gap-8">
+            
+            <!-- 헤더 브랜딩 & 넘버링 -->
+            <div class="flex flex-col gap-3 text-left">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl font-black text-brand-blue/30 tracking-tight">{{ selectedProgram.num }}</span>
+                <span class="text-[10px] font-extrabold px-3 py-1 bg-brand-blue/8 text-brand-blue rounded-full border border-brand-blue/10">
+                  {{ selectedProgram.id.startsWith('career') ? '진로 교육 프로그램' : '디지털 미래 솔루션' }}
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-black text-slate-900 leading-snug">
+                {{ selectedProgram.title }}
+              </h3>
+              <p class="text-xs md:text-sm text-slate-500 font-semibold leading-relaxed">
+                {{ selectedProgram.badge }}
+              </p>
+            </div>
+
+            <!-- 1. 핵심 인트로 -->
+            <div class="p-5 rounded-2xl bg-brand-blue/5 border border-brand-blue/10 text-left">
+              <p class="text-sm md:text-base font-bold text-slate-700 leading-relaxed">
+                {{ selectedProgram.intro }}
+              </p>
+            </div>
+
+            <!-- 2. 주요 특징 리스트 -->
+            <div v-if="selectedProgram.features" class="flex flex-col gap-3 text-left">
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                <Sparkles class="w-4 h-4 text-brand-blue" />
+                교육 핵심 특징 및 지향점
+              </h4>
+              <ul class="flex flex-col gap-2.5 mt-1.5">
+                <li 
+                  v-for="(feat, fIdx) in selectedProgram.features" 
+                  :key="fIdx"
+                  class="flex items-start gap-2.5 text-slate-650 text-sm font-semibold"
+                >
+                  <CheckCircle class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{{ feat }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2-1. 강점 스캐너용 솔루션 구분 노출 -->
+            <div v-if="selectedProgram.solutions" class="flex flex-col gap-4 text-left">
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                <Sparkles class="w-4 h-4 text-brand-blue" />
+                상세 제공 솔루션
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-1">
+                <div 
+                  v-for="(sol, sIdx) in selectedProgram.solutions" 
+                  :key="sIdx"
+                  class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col gap-2"
+                >
+                  <span class="text-xs font-extrabold text-brand-blue bg-brand-blue/8 px-2.5 py-1 rounded-md w-max">
+                    {{ sol.type }}
+                  </span>
+                  <p class="text-xs text-slate-600 font-bold leading-relaxed mt-1">
+                    {{ sol.desc }}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. 우리의 캔버스용 프로세스 3단계 노출 -->
+            <div v-if="selectedProgram.steps" class="flex flex-col gap-4 text-left">
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                <Sparkles class="w-4 h-4 text-brand-blue" />
+                우리의 캔버스 3단계 리얼 활동 프로세스
+              </h4>
+              <div class="flex flex-col gap-3 mt-1">
+                <div 
+                  v-for="(step, stIdx) in selectedProgram.steps" 
+                  :key="stIdx"
+                  class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-brand-blue/30"
+                >
+                  <div class="w-8 h-8 rounded-lg bg-brand-blue text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
+                    {{ stIdx + 1 }}
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-extrabold text-slate-800">{{ step.name }}</span>
+                    <p class="text-xs text-slate-500 font-semibold leading-relaxed mt-0.5">{{ step.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. 운영 정보 및 추천 대상 그리드 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-slate-100 pt-6 text-left">
+              <!-- 추천 대상 -->
+              <div class="flex gap-3 items-start p-3 rounded-xl hover:bg-slate-50 transition-smooth">
+                <div class="w-9 h-9 rounded-lg bg-brand-indigo/10 flex items-center justify-center text-brand-indigo shrink-0">
+                  <Target class="w-4 h-4" />
+                </div>
+                <div>
+                  <h5 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">추천 대상 학년</h5>
+                  <p class="text-xs md:text-sm font-bold text-slate-700 mt-1">{{ selectedProgram.targets }}</p>
+                </div>
+              </div>
+              <!-- 운영 정보 -->
+              <div class="flex gap-3 items-start p-3 rounded-xl hover:bg-slate-50 transition-smooth">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0">
+                  <Clock class="w-4 h-4" />
+                </div>
+                <div>
+                  <h5 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">차시 구성 및 예산 범위</h5>
+                  <p class="text-xs md:text-sm font-bold text-slate-700 mt-1">{{ selectedProgram.info }}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. 핵심 키워드 태그 리스트 -->
+            <div class="flex flex-wrap gap-2 border-t border-slate-100 pt-6 justify-start">
+              <span 
+                v-for="kw in selectedProgram.keywords" 
+                :key="kw"
+                class="inline-flex items-center gap-0.5 text-xs font-bold px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-brand-blue/8 hover:text-brand-blue text-slate-500 border border-slate-200/50 cursor-pointer transition-smooth"
+              >
+                <Hash class="w-3 h-3 opacity-60" />
+                {{ kw }}
+              </span>
+            </div>
+
+          </div>
+
+          <!-- 모달 하단 푸터 액션바 -->
+          <div class="p-6 bg-slate-50 border-t border-slate-100 flex items-center justify-between z-10 shrink-0">
+            <span class="text-xs font-bold text-slate-400">실시간 유선 상담: 010-8503-2130</span>
+            <a 
+              href="#contact" 
+              @click="closeProgramModal"
+              class="px-5 py-2.5 rounded-xl bg-gradient-brand text-white text-xs font-black shadow-md hover:shadow-lg transition-smooth"
+            >
+              해당 프로그램 즉시 문의하기
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -906,11 +1036,125 @@ import { supabase } from '../utils/supabase'
 import Swal from 'sweetalert2'
 import { 
   Menu, X, Sparkles, Download, ArrowRight, Compass, Award, 
-  ChevronRight, Play, CheckCircle, Phone, Mail 
+  ChevronRight, Play, CheckCircle, Phone, Mail, Clock, PiggyBank, Target, Hash
 } from 'lucide-vue-next'
 
 // --- 🧭 모바일 상태 제어 ---
 const isMobileMenuOpen = ref(false)
+
+// --- 팝업 모달 상세 교육 프로그램 제어 ---
+const selectedProgram = ref(null)
+
+const openProgramModal = (prog) => {
+  selectedProgram.value = prog
+}
+
+const closeProgramModal = () => {
+  selectedProgram.value = null
+}
+
+// 상세 프로그램 정보 데이터셋 (사용자 기입 텍스트 100% 반영)
+const programsData = {
+  career: [
+    {
+      id: 'career-01',
+      num: '01',
+      title: '강점 발굴단',
+      badge: '추천: 신입생, 자유학기제, 리더십 캠프',
+      shortIntro: '모두가 웃고 소통하며 어색함을 말끔히 깨부수고, 다채로운 참여 게임 속에서 각자의 고유한 강점과 팀워크를 자연스럽게 발견하는 협력 중심 팀빌딩 프로그램입니다.',
+      intro: '어색함을 해소하고 나의 강점과 팀워크를 발견하는 협력 중심 진로 탐색 프로그램입니다. 모두가 웃고 즐기며 자연스럽게 진로를 탐색하는 팀빌딩 활동을 제공합니다.',
+      features: [
+        '팀빌딩 게임으로 자연스럽게 진로 탐색',
+        '개인 강점 발견 및 협력 역량 강화',
+        '즐거운 경험에서 진로 인식 확장'
+      ],
+      targets: '신입생, 자유학기제, 리더십 캠프',
+      info: '2~4차시 / 예산 150만원~',
+      keywords: ['진로', '인성', '협력', '팀워크', '소통', '긍정', '팀빌딩']
+    },
+    {
+      id: 'career-02',
+      num: '02',
+      title: '마인드 부스터',
+      badge: '추천: 중·고등학교 학년 전체, 힐링 토크',
+      shortIntro: '공연과 스토리텔링, 그리고 몰입형 레크리에이션이 결합되어 학생들의 닫힌 내면과 진로 고민이 유쾌하게 풀리는 특별한 양방향 토크 강연 콘서트 교육입니다.',
+      intro: '공연 형식의 진로 교육으로 학생들의 마음을 열고 진로에 대한 긍정적 인식을 심어줍니다. 양방향 토크 콘서트 형식으로 공연과 스토리텔링이 결합되어 특별한 교육 경험을 제공합니다.',
+      features: [
+        '실시간 질의응답을 통한 양방향 소통',
+        '학생들의 눈높이에 맞춘 공감형 콘텐츠 제공',
+        '긍정적 마인드셋 강화 및 진로 동기부여'
+      ],
+      targets: '중·고등학교 학년 전체',
+      info: '2~3차시 / 예산 200만원~',
+      keywords: ['마인드제고', '회복탄력', '동기부여', '진로', '자기효능감', '도전의식']
+    },
+    {
+      id: 'career-03',
+      num: '03',
+      title: '우리의 캔버스',
+      badge: '추천: 중2~3학년, 고1~2학년, 학교 축제',
+      shortIntro: '기획부터 현장 무대 운영, 체험부스 조성까지 3단계 프로세스를 거쳐 아이들이 주축이 되어 이끌어 나가는 대규모 청소년 진로 축제 솔루션입니다.',
+      intro: '학생들이 직접 기획하고 실행하며 관람하는 살아있는 진로체험의 장입니다. 단순 관람을 넘어 주도적 참여하여 진로 역량을 키우는 통합형 프로그램입니다.',
+      steps: [
+        { name: 'STEP 1 무대 아래', desc: '축제 콘텐츠 기획, 아이디어 구상, 홍보물 제작 및 마케팅 전략 수립, 역할 분담' },
+        { name: 'STEP 2 무대 위', desc: '공연·발표·전시 등 실전 무대 운영을 통한 역량 발휘 및 자신감 향상' },
+        { name: 'STEP 3 무대 밖', desc: '진로 부스 체험 및 또래 롤모델 발견을 통한 동기부여, 네트워크 형성' }
+      ],
+      targets: '중2~3학년, 고1~2학년',
+      info: '2~3차시 / 예산 250만원~',
+      keywords: ['진로체험', '축제기획', '자기주도성', '진로역량', '동기부여']
+    }
+  ],
+  digital: [
+    {
+      id: 'digital-01',
+      num: '01',
+      title: '나의 강점 스캐너',
+      badge: '데이터 진단 / 학급 보고서 / 소규모 동아리',
+      shortIntro: '과학적 데이터 분석을 통해 학생의 강점을 발견하고 학급 케미를 찾는 데이터 기반 진로 진단 프로그램입니다.',
+      intro: '과학적 데이터 분석을 통해 학생의 강점을 발견하고 학급 케미를 찾는 데이터 기반 진로 진단 프로그램입니다.',
+      solutions: [
+        { type: '학생용', desc: '개인 강점/성향 진단 리포트, 맞춤형 진로 추천 및 로드맵, 자기 이해 기반 목표 설정 지원' },
+        { type: '교사용', desc: '학급 전체 성향 분석 대시보드, 학생 간 관계 분석, 팀 구성 최적화 추천' }
+      ],
+      targets: '전 학년, 소규모 동아리',
+      info: '2~3차시 (별도 상담 문의)',
+      keywords: ['자기이해', '상호존중', '데이터 리터러시']
+    },
+    {
+      id: 'digital-02',
+      num: '02',
+      title: '나 사용 설명서 (Visual Portfolio)',
+      badge: 'AI 활용 / 포트폴리오 / 소규모 동아리',
+      shortIntro: '단순 AI 활용을 넘어 맹목적 AI 의존 문제를 성찰하고, 나를 깊이 이해한 뒤 생성형 AI 아트를 통해 나만의 포트폴리오를 제작하는 혁신 캠프입니다.',
+      intro: '단순한 AI 활용을 넘어 맹목적 AI 의존의 문제점을 인식하고, 나를 먼저 이해하여 주도적으로 AI를 활용하는 방법을 배우는 프로그램입니다.',
+      features: [
+        '주도적 AI 활용을 위한 자기 이해 기반 포트폴리오 제작',
+        '본인의 감정과 정체성 탐색을 통한 진정성 있는 결과물 창출',
+        '필로우지 키트 활용: 필로우지 내 감정알기 키트를 활용하여 심도 있는 자기 내면 탐색 진행'
+      ],
+      targets: '전 학년, 소규모 동아리',
+      info: '2~3차시 (별도 상담 문의)',
+      keywords: ['자기이해', '감정탐색', '윤리교육', '포트폴리오']
+    },
+    {
+      id: 'digital-03',
+      num: '03',
+      title: '일상의 발명가',
+      badge: '노코딩 AI 코딩 / 실생활 해결 / 중·고등학생',
+      shortIntro: '어려운 프로그래밍 지식 없이 오직 대화형 AI 프롬프트 엔진을 사용해 실생활의 불편을 해소하는 나만의 창의 앱 프로토타입을 손수 구현하는 테크 교육입니다.',
+      intro: '복잡한 코드 작성 없이 AI와의 대화를 통해 실생활에서 활용 가능한 프로그램을 직접 기획하고 구현하는 혁신적인 교육 프로그램입니다.',
+      features: [
+        'AI와 협업하여 아이디어를 즉시 구현',
+        '창의적 사고력을 발휘한 실생활 문제 해결 중심 활동',
+        '디지털 리터러시 강화 및 성취감/자존감 고취'
+      ],
+      targets: '중·고등학생',
+      info: '2~4차시 / 예산 200만원~',
+      keywords: ['바이브코딩', '창의력', '문제해결', '디지털윤리', '성취감', '자존감']
+    }
+  ]
+}
 
 // --- 🎨 탭 제어 ---
 const activeTab = ref('career')
@@ -1007,7 +1251,6 @@ const fetchGallery = async () => {
     const { data, error } = await supabase
       .from('gallery')
       .select('*')
-      .order('order_index', { ascending: true })
       .order('created_at', { ascending: false })
       
     if (error) throw error

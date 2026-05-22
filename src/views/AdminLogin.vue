@@ -1,25 +1,25 @@
 <template>
-  <div class="min-h-screen bg-brand-lightBg text-slate-800 flex items-center justify-center px-6 relative overflow-hidden">
+  <div class="min-h-screen bg-[#F8FAFC] text-slate-800 flex items-center justify-center px-6 relative overflow-hidden">
     
-    <!-- 🌠 배경 장식용 백그라운드 오라 -->
-    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-blue/10 blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brand-indigo/10 blur-[120px] pointer-events-none"></div>
-
+    <!-- 🌠 배경 장식용 백그라운드 오라 (품격있는 라이트 블루 블루) -->
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-blue/6 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brand-indigo/6 blur-[120px] pointer-events-none"></div>
+ 
     <div class="w-full max-w-md z-10">
       
       <!-- 뒤로가기 넛지 링크 -->
       <router-link to="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand-blue mb-8 transition-smooth">
         <span>←</span> 메인 홈페이지로 돌아가기
       </router-link>
-
-      <!-- 로그인 카드 컨테이너 -->
-      <div class="glass-card p-8 md:p-10 rounded-3xl border border-slate-200/60 shadow-2xl relative overflow-hidden">
+ 
+      <!-- 로그인 카드 컨테이너 (3D 소프트 섀도우) -->
+      <div class="bg-white p-8 md:p-10 rounded-[32px] border border-slate-200/50 shadow-[0_20px_50px_rgba(37,99,235,0.06)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.12)] transition-smooth duration-500 relative overflow-hidden">
         
         <!-- 로고 브랜딩 -->
         <div class="flex flex-col items-center gap-3 text-center mb-8">
           <div class="w-12 h-12 rounded-2xl bg-gradient-brand flex items-center justify-center font-black text-white text-2xl shadow-lg shadow-brand-blue/20">한</div>
           <h2 class="text-2xl font-black tracking-tight text-slate-900 mt-2">한페이지 관리 포털</h2>
-          <p class="text-xs text-slate-500 font-light leading-relaxed">
+          <p class="text-xs text-slate-500 font-semibold leading-relaxed">
             한페이지 공식 사이트 관리자 전용 인증 공간입니다.
           </p>
         </div>
