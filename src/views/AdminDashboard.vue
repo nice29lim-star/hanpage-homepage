@@ -6,24 +6,24 @@
     <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-pink/10 blur-[130px] pointer-events-none"></div>
 
     <!-- 대시보드 상단 제어 바 -->
-    <header class="sticky top-0 z-40 glass-card border-b border-white/5 w-full">
+    <header class="sticky top-0 z-40 glass-card border-b border-slate-200/60 w-full">
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         <!-- 왼쪽 브랜드 -->
         <router-link to="/" class="flex items-center gap-2.5 group">
-          <div class="w-9 h-9 rounded-xl bg-gradient-brand flex items-center justify-center font-bold text-white text-base">한</div>
+          <div class="w-9 h-9 rounded-xl bg-gradient-brand flex items-center justify-center font-bold text-slate-900 text-base">한</div>
           <span class="text-lg font-black tracking-wide bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent group-hover:text-brand-pink transition-smooth">한페이지 대시보드</span>
         </router-link>
 
         <!-- 오른쪽 사용자 상태 및 로그아웃 -->
         <div class="flex items-center gap-4">
           <div class="hidden sm:flex flex-col text-right">
-            <span class="text-xs font-semibold text-slate-300">{{ userEmail }}</span>
+            <span class="text-xs font-semibold text-slate-600">{{ userEmail }}</span>
             <span class="text-[10px] text-brand-purple-light font-bold">인증 관리자 계정</span>
           </div>
           <button 
             @click="handleLogout"
-            class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-red-500/10 border border-white/10 hover:border-red-500/40 text-slate-300 hover:text-red-400 text-xs font-bold transition-smooth flex items-center gap-2"
+            class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-red-500/10 border border-slate-200/80 hover:border-red-500/40 text-slate-600 hover:text-red-400 text-xs font-bold transition-smooth flex items-center gap-2"
           >
             <LogOut class="w-3.5 h-3.5" />
             로그아웃
@@ -36,19 +36,19 @@
     <main class="flex-grow max-w-7xl mx-auto w-full px-6 py-10 z-10 flex flex-col gap-10">
       
       <!-- 대시보드 정보 헤더 -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-slate-900/30 border border-white/5 p-8 rounded-3xl glass-card">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-white border border-slate-200/60 p-8 rounded-3xl shadow-lg">
         <div class="flex flex-col gap-2">
-          <h2 class="text-2xl md:text-3xl font-black text-white">실시간 학사 파트너 관리 포털</h2>
+          <h2 class="text-2xl md:text-3xl font-black text-slate-900">실시간 학사 파트너 관리 포털</h2>
           <p class="text-xs md:text-sm text-slate-400 font-light leading-relaxed">
             고객들이 제출한 소중한 진로 교육 문의를 모니터링하고, 활동 갤러리에 업로드할 사진 및 동영상을 실시간 통합 제어합니다.
           </p>
         </div>
         
         <!-- 대시보드 컨트롤 탭 (넛지) -->
-        <div class="flex p-1 rounded-xl bg-slate-950 border border-white/5">
+        <div class="flex p-1 rounded-xl bg-slate-100 border border-slate-200/80 shadow-inner">
           <button 
             @click="activeSubTab = 'inquiries'"
-            :class="activeSubTab === 'inquiries' ? 'bg-gradient-brand text-white shadow-md' : 'text-slate-400 hover:text-white'"
+            :class="activeSubTab === 'inquiries' ? 'bg-gradient-brand text-slate-900 shadow-md' : 'text-slate-400 hover:text-slate-900'"
             class="px-5 py-2.5 rounded-lg text-xs font-bold transition-smooth flex items-center gap-1.5"
           >
             <FileText class="w-3.5 h-3.5" />
@@ -56,7 +56,7 @@
           </button>
           <button 
             @click="activeSubTab = 'gallery'"
-            :class="activeSubTab === 'gallery' ? 'bg-gradient-brand text-white shadow-md' : 'text-slate-400 hover:text-white'"
+            :class="activeSubTab === 'gallery' ? 'bg-gradient-brand text-slate-900 shadow-md' : 'text-slate-400 hover:text-slate-900'"
             class="px-5 py-2.5 rounded-lg text-xs font-bold transition-smooth flex items-center gap-1.5"
           >
             <Image class="w-3.5 h-3.5" />
@@ -67,12 +67,12 @@
 
       <!-- 서브 탭 1: 문의 목록 관리 -->
       <section v-if="activeSubTab === 'inquiries'" class="flex flex-col gap-6">
-        <div class="flex items-center justify-between border-b border-white/5 pb-4">
-          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+        <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
+          <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-brand-pink animate-pulse"></span>
             실시간 고객 접수 내역
           </h3>
-          <button @click="fetchInquiries" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white transition-smooth">
+          <button @click="fetchInquiries" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-slate-200/80 hover:bg-white/10 text-slate-600 hover:text-slate-900 transition-smooth">
             목록 새로고침
           </button>
         </div>
@@ -84,17 +84,17 @@
         </div>
 
         <!-- 빈 내역 -->
-        <div v-else-if="inquiries.length === 0" class="glass-card rounded-3xl py-20 border border-white/5 text-center flex flex-col items-center gap-4">
+        <div v-else-if="inquiries.length === 0" class="glass-card rounded-3xl py-20 border border-slate-200/60 text-center flex flex-col items-center gap-4">
           <span class="text-4xl">📭</span>
-          <h4 class="text-lg font-bold text-white">현재 접수된 교육 문의가 없습니다.</h4>
-          <p class="text-xs text-slate-500 max-w-sm mx-auto">메인 페이지의 접수 폼이 활성화되면 실시간으로 이곳에 고객 데이터가 쌓입니다.</p>
+          <h4 class="text-lg font-bold text-slate-900">현재 접수된 교육 문의가 없습니다.</h4>
+          <p class="text-xs text-slate-400 max-w-sm mx-auto">메인 페이지의 접수 폼이 활성화되면 실시간으로 이곳에 고객 데이터가 쌓입니다.</p>
         </div>
 
         <!-- 테이블 목록 -->
-        <div v-else class="overflow-x-auto w-full glass-card rounded-3xl border border-white/5 shadow-xl">
+        <div v-else class="overflow-x-auto w-full glass-card rounded-3xl border border-slate-200/60 shadow-xl">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
-              <tr class="bg-slate-900/60 border-b border-white/5 text-slate-400 text-xs font-bold uppercase tracking-wider">
+              <tr class="bg-slate-50 border-b border-slate-200/80 border-slate-200/60 text-slate-400 text-xs font-bold uppercase tracking-wider">
                 <th class="py-5 px-6">접수 일시</th>
                 <th class="py-5 px-6">신청교사 / 학교명</th>
                 <th class="py-5 px-6">관심 프로그램</th>
@@ -115,7 +115,7 @@
                 </td>
                 <!-- 신청교사 / 학교명 -->
                 <td class="py-4 px-6 whitespace-nowrap">
-                  <div class="font-bold text-white">{{ item.name }}</div>
+                  <div class="font-bold text-slate-900">{{ item.name }}</div>
                   <div class="text-xs text-slate-400 mt-0.5">{{ item.school_name }}</div>
                 </td>
                 <!-- 관심 프로그램 -->
@@ -126,7 +126,7 @@
                 </td>
                 <!-- 문의 사항 상세 -->
                 <td class="py-4 px-6 max-w-xs md:max-w-sm">
-                  <p class="text-xs text-slate-300 font-light leading-relaxed line-clamp-3 whitespace-pre-line">
+                  <p class="text-xs text-slate-600 font-light leading-relaxed line-clamp-3 whitespace-pre-line">
                     {{ item.content }}
                   </p>
                 </td>
@@ -138,7 +138,7 @@
                     :class="{
                       'bg-red-500/10 text-red-400 border-red-500/20': item.status === '접수',
                       'bg-yellow-500/10 text-yellow-400 border-yellow-500/20': item.status === '검토중',
-                      'bg-emerald-500/10 text-emerald-400 border-emerald-500/20': item.status === '완료'
+                      'bg-emerald-500/10 text-emerald-600 border-emerald-500/20': item.status === '완료'
                     }"
                     class="text-xs font-bold px-3 py-1.5 rounded-lg border focus:outline-none focus:ring-1 focus:ring-brand-purple cursor-pointer transition-smooth"
                   >
@@ -151,7 +151,7 @@
                 <td class="py-4 px-6 text-center whitespace-nowrap">
                   <button 
                     @click="deleteInquiry(item.id)"
-                    class="p-2 rounded-lg bg-white/5 hover:bg-red-500/15 border border-white/10 hover:border-red-500/30 text-slate-400 hover:text-red-400 transition-smooth"
+                    class="p-2 rounded-lg bg-white/5 hover:bg-red-500/15 border border-slate-200/80 hover:border-red-500/30 text-slate-400 hover:text-red-400 transition-smooth"
                   >
                     <Trash2 class="w-4 h-4" />
                   </button>
@@ -167,9 +167,9 @@
         
         <!-- 왼쪽: 실시간 미디어 업로더 (Supabase Storage 직접 업로드 연동) -->
         <div class="lg:col-span-4 w-full sticky top-28">
-          <div class="glass-card p-6 md:p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden flex flex-col gap-6">
+          <div class="glass-card p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-2xl relative overflow-hidden flex flex-col gap-6">
             
-            <h3 class="text-lg font-bold text-white flex items-center gap-2 pb-3 border-b border-white/5">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2 pb-3 border-b border-slate-200/60">
               <Plus class="w-5 h-5 text-brand-purple-light" />
               신규 활동 미디어 등록
             </h3>
@@ -185,7 +185,7 @@
                   v-model="galleryForm.title"
                   required
                   placeholder="예: 서울수리중학교 강점 발굴단"
-                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-200/80 text-slate-900 placeholder-slate-600 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth"
                 />
               </div>
 
@@ -196,7 +196,7 @@
                   id="g-type" 
                   v-model="galleryForm.media_type"
                   required
-                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-white/10 text-slate-300 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-200/80 text-slate-600 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth"
                 >
                   <option value="image">현장 사진 업로드 (Image)</option>
                   <option value="video">현장 비디오 업로드 (Video)</option>
@@ -211,7 +211,7 @@
                   v-model="galleryForm.description"
                   rows="3"
                   placeholder="학생들이 참여했던 모습에 대한 간단한 묘사를 적어주세요."
-                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth resize-none text-xs"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-200/80 text-slate-900 placeholder-slate-600 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple text-sm transition-smooth resize-none text-xs"
                 ></textarea>
               </div>
 
@@ -224,7 +224,7 @@
                   @dragleave.prevent="isDragging = false"
                   @drop.prevent="handleFileDrop"
                   :class="[
-                    isDragging ? 'border-brand-pink bg-brand-pink/5' : 'border-white/10 hover:border-brand-purple/40 bg-slate-900/40',
+                    isDragging ? 'border-brand-indigo bg-brand-indigo/5' : 'border-slate-200/80 hover:border-brand-purple/40 bg-slate-900/40',
                     galleryFile ? 'border-emerald-500/40 bg-emerald-500/5' : ''
                   ]"
                   class="w-full aspect-video border border-dashed rounded-2xl flex flex-col items-center justify-center p-4 text-center cursor-pointer transition-smooth group relative"
@@ -241,13 +241,13 @@
                   
                   <div class="flex flex-col items-center gap-2 group-hover:scale-105 transition-smooth" v-if="!galleryFile">
                     <UploadCloud class="w-10 h-10 text-slate-400 group-hover:text-brand-purple-light transition-smooth" />
-                    <p class="text-xs text-slate-300 font-semibold">드래그 앤 드롭 또는 클릭하여 업로드</p>
-                    <p class="text-[10px] text-slate-500 font-light">사진(PNG, JPG) 및 비디오(MP4 등)</p>
+                    <p class="text-xs text-slate-600 font-semibold">드래그 앤 드롭 또는 클릭하여 업로드</p>
+                    <p class="text-[10px] text-slate-400 font-light">사진(PNG, JPG) 및 비디오(MP4 등)</p>
                   </div>
                   
                   <div class="flex flex-col items-center gap-2" v-else>
-                    <Check class="w-10 h-10 text-emerald-400" />
-                    <p class="text-xs text-emerald-400 font-bold max-w-[200px] truncate">{{ galleryFile.name }}</p>
+                    <Check class="w-10 h-10 text-emerald-600" />
+                    <p class="text-xs text-emerald-600 font-bold max-w-[200px] truncate">{{ galleryFile.name }}</p>
                     <p class="text-[10px] text-slate-400 font-medium">크기: {{ formatBytes(galleryFile.size) }}</p>
                     <button 
                       type="button" 
@@ -264,7 +264,7 @@
               <button 
                 type="submit" 
                 :disabled="isUploading"
-                class="w-full py-4 mt-2 rounded-2xl bg-gradient-brand hover:bg-gradient-brand-hover text-white text-sm font-extrabold shadow-xl shadow-brand-pink/20 hover:shadow-brand-pink/35 transition-smooth flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                class="w-full py-4 mt-2 rounded-2xl bg-gradient-brand hover:bg-gradient-brand-hover text-slate-900 text-sm font-extrabold shadow-xl shadow-brand-pink/20 hover:shadow-brand-pink/35 transition-smooth flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span v-if="!isUploading">Storage 직접 업로드 및 등록</span>
                 <span v-else class="flex items-center gap-2">
@@ -278,11 +278,11 @@
 
         <!-- 오른쪽: 현재 등록된 갤러리 목록 및 삭제 제어 -->
         <div class="lg:col-span-8 w-full flex flex-col gap-6">
-          <div class="flex items-center justify-between border-b border-white/5 pb-4">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
+            <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
               📂 현재 업로드된 미디어 ({{ galleryItems.length }})
             </h3>
-            <button @click="fetchGallery" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white transition-smooth">
+            <button @click="fetchGallery" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-slate-200/80 hover:bg-white/10 text-slate-600 hover:text-slate-900 transition-smooth">
               목록 새로고침
             </button>
           </div>
@@ -294,10 +294,10 @@
           </div>
 
           <!-- 빈 내역 -->
-          <div v-else-if="galleryItems.length === 0" class="glass-card rounded-3xl py-20 border border-white/5 text-center flex flex-col items-center gap-4">
+          <div v-else-if="galleryItems.length === 0" class="glass-card rounded-3xl py-20 border border-slate-200/60 text-center flex flex-col items-center gap-4">
             <span class="text-4xl">🖼️</span>
-            <h4 class="text-lg font-bold text-white">등록된 활동 갤러리가 없습니다.</h4>
-            <p class="text-xs text-slate-500 max-w-sm mx-auto">왼쪽 업로더 양식을 작성하고 이미지를 직접 드롭해 올리시면 즉시 연동됩니다!</p>
+            <h4 class="text-lg font-bold text-slate-900">등록된 활동 갤러리가 없습니다.</h4>
+            <p class="text-xs text-slate-400 max-w-sm mx-auto">왼쪽 업로더 양식을 작성하고 이미지를 직접 드롭해 올리시면 즉시 연동됩니다!</p>
           </div>
 
           <!-- 그리드 목록 -->
@@ -305,11 +305,11 @@
             <div 
               v-for="item in galleryItems" 
               :key="item.id"
-              class="glass-card rounded-2xl overflow-hidden border border-white/5 shadow-md flex flex-col justify-between group h-full relative"
+              class="glass-card rounded-2xl overflow-hidden border border-slate-200/60 shadow-md flex flex-col justify-between group h-full relative"
             >
               <div>
                 <!-- 미디어 썸네일 -->
-                <div class="aspect-video w-full bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-white/5">
+                <div class="aspect-video w-full bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-200/60">
                   <img 
                     v-if="item.media_type === 'image'"
                     :src="item.media_url" 
@@ -319,7 +319,7 @@
                   />
                   <div v-else class="w-full h-full bg-gradient-to-tr from-brand-purple/20 to-brand-pink/20 flex flex-col items-center justify-center gap-2">
                     <Video class="w-8 h-8 text-brand-pink" />
-                    <span class="text-xs text-slate-300 font-bold">현장 동영상 파일 (.mp4)</span>
+                    <span class="text-xs text-slate-600 font-bold">현장 동영상 파일 (.mp4)</span>
                   </div>
                   
                   <!-- 미디어 정보 뱃지 -->
@@ -333,7 +333,7 @@
 
                 <!-- 타이틀 및 설명 -->
                 <div class="p-5 flex flex-col gap-2">
-                  <h4 class="font-bold text-white text-sm line-clamp-1">{{ item.title }}</h4>
+                  <h4 class="font-bold text-slate-900 text-sm line-clamp-1">{{ item.title }}</h4>
                   <p class="text-xs text-slate-400 font-light line-clamp-2 leading-relaxed" v-if="item.description">
                     {{ item.description }}
                   </p>
@@ -341,11 +341,11 @@
               </div>
 
               <!-- 제어 패널 (물리적 파일 동시 삭제) -->
-              <div class="px-5 py-4 bg-slate-900/40 border-t border-white/5 flex items-center justify-between">
+              <div class="px-5 py-4 bg-slate-900/40 border-t border-slate-200/60 flex items-center justify-between">
                 <a 
                   :href="item.media_url" 
                   target="_blank" 
-                  class="text-xs text-slate-400 hover:text-white transition-smooth flex items-center gap-1 hover:underline"
+                  class="text-xs text-slate-400 hover:text-slate-900 transition-smooth flex items-center gap-1 hover:underline"
                 >
                   <ExternalLink class="w-3.5 h-3.5" />
                   파일 링크 확인
@@ -353,7 +353,7 @@
                 
                 <button 
                   @click="deleteGalleryItem(item.id, item.media_url)"
-                  class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500 border border-red-500/20 hover:border-red-500 text-red-400 hover:text-white text-xs font-bold transition-smooth flex items-center gap-1"
+                  class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500 border border-red-500/20 hover:border-red-500 text-red-400 hover:text-slate-900 text-xs font-bold transition-smooth flex items-center gap-1"
                 >
                   <Trash2 class="w-3.5 h-3.5" />
                   영구 삭제
@@ -419,8 +419,8 @@ const updateInquiryStatus = async (id, newStatus) => {
       position: 'top-end',
       showConfirmButton: false,
       timer: 2000,
-      background: '#0f172a',
-      color: '#f8fafc'
+      background: '#ffffff',
+      color: '#0f172a'
     })
   } catch (err) {
     console.error('문의 상태 업데이트 에러:', err.message)
@@ -438,8 +438,8 @@ const deleteInquiry = async (id) => {
     cancelButtonColor: '#3085d6',
     confirmButtonText: '삭제하기',
     cancelButtonText: '취소',
-    background: '#0f172a',
-    color: '#f8fafc'
+    background: '#ffffff',
+    color: '#0f172a'
   })
 
   if (result.isConfirmed) {
@@ -455,8 +455,8 @@ const deleteInquiry = async (id) => {
         icon: 'success',
         title: '삭제 완료!',
         text: '접수 내역이 테이블에서 영구 폐기되었습니다.',
-        background: '#0f172a',
-        color: '#f8fafc'
+        background: '#ffffff',
+        color: '#0f172a'
       })
       fetchInquiries()
     } catch (err) {
@@ -533,8 +533,8 @@ const uploadMedia = async () => {
       icon: 'error',
       title: '파일이 선택되지 않았습니다',
       text: '업로드할 사진 또는 비디오 파일을 선택해 주세요.',
-      background: '#0f172a',
-      color: '#f8fafc'
+      background: '#ffffff',
+      color: '#0f172a'
     })
     return
   }
@@ -589,8 +589,8 @@ const uploadMedia = async () => {
       icon: 'success',
       title: '미디어 등록 완료!',
       text: '선택하신 미디어가 Supabase Storage에 직접 보관되었으며 메인 페이지에 실시간 반영됩니다.',
-      background: '#0f172a',
-      color: '#f8fafc'
+      background: '#ffffff',
+      color: '#0f172a'
     })
 
     // 폼 및 파일 리셋
@@ -608,8 +608,8 @@ const uploadMedia = async () => {
       icon: 'error',
       title: '업로드 오류 발생',
       text: `죄송합니다. 오류가 발생했습니다: ${err.message}. Supabase Storage 버킷 'hanpage-media'가 생성되었는지, 권한이 있는지 확인해 주세요.`,
-      background: '#0f172a',
-      color: '#f8fafc'
+      background: '#ffffff',
+      color: '#0f172a'
     })
   } finally {
     isUploading.value = false
@@ -628,8 +628,8 @@ const deleteGalleryItem = async (id, mediaUrl) => {
     cancelButtonColor: '#3085d6',
     confirmButtonText: '삭제하기',
     cancelButtonText: '취소',
-    background: '#0f172a',
-    color: '#f8fafc'
+    background: '#ffffff',
+    color: '#0f172a'
   })
 
   if (result.isConfirmed) {
@@ -662,8 +662,8 @@ const deleteGalleryItem = async (id, mediaUrl) => {
         icon: 'success',
         title: '미디어 파기 완료!',
         text: '갤러리 레코드와 물리 미디어가 안전하게 폐기되었습니다.',
-        background: '#0f172a',
-        color: '#f8fafc'
+        background: '#ffffff',
+        color: '#0f172a'
       })
       fetchGallery()
 
@@ -673,8 +673,8 @@ const deleteGalleryItem = async (id, mediaUrl) => {
         icon: 'error',
         title: '삭제 중 에러',
         text: `오류가 발생했습니다: ${err.message}`,
-        background: '#0f172a',
-        color: '#f8fafc'
+        background: '#ffffff',
+        color: '#0f172a'
       })
     }
   }
@@ -701,8 +701,8 @@ const handleLogout = async () => {
       text: '안전하게 로그아웃 세션이 파기되었습니다.',
       timer: 1500,
       showConfirmButton: false,
-      background: '#0f172a',
-      color: '#f8fafc'
+      background: '#ffffff',
+      color: '#0f172a'
     })
     
     setTimeout(() => {

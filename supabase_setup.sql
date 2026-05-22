@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS public.inquiries (
     created_at TIMESTAMPTZ DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL,
     name TEXT NOT NULL,
     school_name TEXT NOT NULL,
+    email TEXT,                              -- 이메일 주소 (추가)
+    phone TEXT,                              -- 연락처 번호 (추가)
     program_interest TEXT NOT NULL,
     content TEXT NOT NULL,
     status TEXT DEFAULT '접수'::text NOT NULL -- '접수', '답변완료', '보류' 등

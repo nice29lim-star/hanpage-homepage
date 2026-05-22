@@ -8,6 +8,22 @@ export default {
     extend: {
       colors: {
         brand: {
+          blue: {
+            light: "#60A5FA",
+            DEFAULT: "#2563EB",
+            dark: "#1D4ED8",
+          },
+          indigo: {
+            light: "#818CF8",
+            DEFAULT: "#4F46E5",
+            dark: "#3730A3",
+          },
+          sky: {
+            light: "#38BDF8",
+            DEFAULT: "#0EA5E9",
+            dark: "#0369A1",
+          },
+          lightBg: "#F8FAFC",
           purple: {
             light: "#C084FC",
             DEFAULT: "#A855F7",
